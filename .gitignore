@@ -45,3 +45,18 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.dll
+*.pdb
+*.txt
+*.cache
+*.exe
+*.png
+*.user
+*.mdf
+*.ldf
+MyTest/MyTest/bin/*
+MyTest/MyTest/obj/*
+MyTest/CodedUITestProject1/bin/*
+MyTest/CodedUITestProject1/obj/*
+MyTest/Demo/bin/*
+MyTest/Demo/obj/*
