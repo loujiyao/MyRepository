@@ -8,6 +8,7 @@ using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UITest.Extension;
 using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
+using Microsoft.VisualStudio.TestTools.UITesting.HtmlControls;
 
 
 namespace CodedUITestProject1
@@ -25,9 +26,25 @@ namespace CodedUITestProject1
         [TestMethod]
         public void CodedUITestMethod1()
         {
+            BrowserWindow bw = new BrowserWindow();
+            bw.SetFocus();
+            bw.DrawHighlight();
+
+            HtmlInputButton b = new HtmlInputButton();
+            b.SearchProperties[HtmlButton.PropertyNames.Id] = "su";
+            b.SearchProperties[HtmlButton.PropertyNames.DisplayText] = "百度一下";
+            b.FilterProperties[HtmlButton.PropertyNames.Class] = "bg s_btn";
+
+            b.SetFocus();
+            b.DrawHighlight();
+
+            Mouse.Click(b);
+
             // 若要为此测试生成代码，请从快捷菜单中选择“为编码的 UI 测试生成代码”，然后选择菜单项之一。
             // 有关生成的代码的详细信息，请参见 http://go.microsoft.com/fwlink/?LinkId=179463
-            this.UIMap.RecordedMethod1();
+            //this.UIMap.RecordedMethod1();
+            //this.UIMap.RecordedMethod2();
+
         }
 
         #region 附加测试特性

@@ -64,6 +64,56 @@ namespace CodedUITestProject1
             Mouse.Click(uI百度一下Button, new Point(62, 12));
         }
         
+        /// <summary>
+        /// RecordedMethod2 - 使用“RecordedMethod2Params”将参数传递到此方法中。
+        /// </summary>
+        public void RecordedMethod2()
+        {
+            #region Variable Declarations
+            HtmlSpan uIItemPane = this.UITechnologyNamevalidtWindow.UITechnologyNamevalidtDocument.UIFCustom.UIItemPane;
+            WinTitleBar uITechnologyNamevalidtTitleBar = this.UITechnologyNamevalidtWindow.UITechnologyNamevalidtTitleBar;
+            HtmlEdit uIWDEdit = this.UITechnologyNamevalidtWindow.UITechnologyNamevalidtDocument.UIWDEdit;
+            HtmlSpan uIItemPane1 = this.UITechnologyNamevalidtWindow.UITechnologyNamevalidtDocument.UIFCustom.UIItemPane1;
+            HtmlInputButton uI百度一下Button = this.UITechnologyNamevalidtWindow.UITechnologyNamevalidtDocument.UI百度一下Button;
+            #endregion
+
+            // 设置标志，以便在非必需操作失败时允许继续播放。(例如，鼠标悬停操作失败时。)
+            Playback.PlaybackSettings.ContinueOnError = true;
+
+            // 将鼠标悬停在(86, 1)处的  窗格 上
+            Mouse.Hover(uIItemPane, new Point(86, 1));
+
+            // 重置标志，以确保在出错时播放停止。
+            Playback.PlaybackSettings.ContinueOnError = false;
+
+            // 单击 “TechnologyName valid technology name_百度搜索 - Intern...” 标题栏
+            Mouse.Click(uITechnologyNamevalidtTitleBar, new Point(324, 7));
+
+            // 设置标志，以便在非必需操作失败时允许继续播放。(例如，鼠标悬停操作失败时。)
+            Playback.PlaybackSettings.ContinueOnError = true;
+
+            // 将鼠标悬停在(86, 1)处的  窗格 上
+            Mouse.Hover(uIItemPane, new Point(86, 1));
+
+            // 重置标志，以确保在出错时播放停止。
+            Playback.PlaybackSettings.ContinueOnError = false;
+
+            // 在 “wd” 文本框 中键入“TechnologyName   valid technology name123”
+            uIWDEdit.Text = this.RecordedMethod2Params.UIWDEditText;
+
+            // 设置标志，以便在非必需操作失败时允许继续播放。(例如，鼠标悬停操作失败时。)
+            Playback.PlaybackSettings.ContinueOnError = true;
+
+            // 将鼠标悬停在(7, 10)处的  窗格 上
+            Mouse.Hover(uIItemPane1, new Point(7, 10));
+
+            // 重置标志，以确保在出错时播放停止。
+            Playback.PlaybackSettings.ContinueOnError = false;
+
+            // 单击 “百度一下” 按钮
+            Mouse.Click(uI百度一下Button, new Point(37, 12));
+        }
+        
         #region Properties
         public virtual RecordedMethod1Params RecordedMethod1Params
         {
@@ -74,6 +124,18 @@ namespace CodedUITestProject1
                     this.mRecordedMethod1Params = new RecordedMethod1Params();
                 }
                 return this.mRecordedMethod1Params;
+            }
+        }
+        
+        public virtual RecordedMethod2Params RecordedMethod2Params
+        {
+            get
+            {
+                if ((this.mRecordedMethod2Params == null))
+                {
+                    this.mRecordedMethod2Params = new RecordedMethod2Params();
+                }
+                return this.mRecordedMethod2Params;
             }
         }
         
@@ -88,12 +150,28 @@ namespace CodedUITestProject1
                 return this.mUIMicrosoftVisualStudiWindow;
             }
         }
+        
+        public UITechnologyNamevalidtWindow UITechnologyNamevalidtWindow
+        {
+            get
+            {
+                if ((this.mUITechnologyNamevalidtWindow == null))
+                {
+                    this.mUITechnologyNamevalidtWindow = new UITechnologyNamevalidtWindow();
+                }
+                return this.mUITechnologyNamevalidtWindow;
+            }
+        }
         #endregion
         
         #region Fields
         private RecordedMethod1Params mRecordedMethod1Params;
         
+        private RecordedMethod2Params mRecordedMethod2Params;
+        
         private UIMicrosoftVisualStudiWindow mUIMicrosoftVisualStudiWindow;
+        
+        private UITechnologyNamevalidtWindow mUITechnologyNamevalidtWindow;
         #endregion
     }
     
@@ -109,6 +187,21 @@ namespace CodedUITestProject1
         /// 在 “wd” 文本框 中键入“xxx”
         /// </summary>
         public string UIWDEditText = "xxx";
+        #endregion
+    }
+    
+    /// <summary>
+    /// 要传递到“RecordedMethod2”中的参数
+    /// </summary>
+    [GeneratedCode("编码的 UI 测试生成器", "11.0.50727.1")]
+    public class RecordedMethod2Params
+    {
+        
+        #region Fields
+        /// <summary>
+        /// 在 “wd” 文本框 中键入“TechnologyName   valid technology name123”
+        /// </summary>
+        public string UIWDEditText = "TechnologyName   valid technology name123";
         #endregion
     }
     
@@ -335,6 +428,218 @@ namespace CodedUITestProject1
         
         #region Fields
         private HtmlSpan mUIItemPane;
+        #endregion
+    }
+    
+    [GeneratedCode("编码的 UI 测试生成器", "11.0.50727.1")]
+    public class UITechnologyNamevalidtWindow : BrowserWindow
+    {
+        
+        public UITechnologyNamevalidtWindow()
+        {
+            #region 搜索条件
+            this.SearchProperties[UITestControl.PropertyNames.Name] = "TechnologyName valid technology name_百度搜索";
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "IEFrame";
+            this.WindowTitles.Add("TechnologyName valid technology name_百度搜索");
+            #endregion
+        }
+        
+        public void LaunchUrl(System.Uri url)
+        {
+            this.CopyFrom(BrowserWindow.Launch(url));
+        }
+        
+        #region Properties
+        public UITechnologyNamevalidtDocument UITechnologyNamevalidtDocument
+        {
+            get
+            {
+                if ((this.mUITechnologyNamevalidtDocument == null))
+                {
+                    this.mUITechnologyNamevalidtDocument = new UITechnologyNamevalidtDocument(this);
+                }
+                return this.mUITechnologyNamevalidtDocument;
+            }
+        }
+        
+        public WinTitleBar UITechnologyNamevalidtTitleBar
+        {
+            get
+            {
+                if ((this.mUITechnologyNamevalidtTitleBar == null))
+                {
+                    this.mUITechnologyNamevalidtTitleBar = new WinTitleBar(this);
+                    #region 搜索条件
+                    this.mUITechnologyNamevalidtTitleBar.WindowTitles.Add("TechnologyName valid technology name_百度搜索");
+                    #endregion
+                }
+                return this.mUITechnologyNamevalidtTitleBar;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UITechnologyNamevalidtDocument mUITechnologyNamevalidtDocument;
+        
+        private WinTitleBar mUITechnologyNamevalidtTitleBar;
+        #endregion
+    }
+    
+    [GeneratedCode("编码的 UI 测试生成器", "11.0.50727.1")]
+    public class UITechnologyNamevalidtDocument : HtmlDocument
+    {
+        
+        public UITechnologyNamevalidtDocument(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region 搜索条件
+            this.SearchProperties[HtmlDocument.PropertyNames.Id] = null;
+            this.SearchProperties[HtmlDocument.PropertyNames.RedirectingPage] = "False";
+            this.SearchProperties[HtmlDocument.PropertyNames.FrameDocument] = "False";
+            this.FilterProperties[HtmlDocument.PropertyNames.Title] = "TechnologyName valid technology name_百度搜索";
+            this.FilterProperties[HtmlDocument.PropertyNames.AbsolutePath] = "/s";
+            this.FilterProperties[HtmlDocument.PropertyNames.PageUrl] = @"http://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=TechnologyName%20%20%20valid%20technology%20name&oq=TechnologyName%20you%20must%20specify%20a%20valid%20technology%20name&rsv_pq=b47dc6a90003f90d&rsv_t=b265snA9tpulWFeZZVgCdHpszmDRbfNZGWJmrG4JMWDzqCvhsiNuiAB3Jl4&rqlang=cn&rsv_enter=0&inputT=1607&rsv_sug3=23&rsv_sug4=1623";
+            this.WindowTitles.Add("TechnologyName valid technology name_百度搜索");
+            #endregion
+        }
+        
+        #region Properties
+        public UIFCustom1 UIFCustom
+        {
+            get
+            {
+                if ((this.mUIFCustom == null))
+                {
+                    this.mUIFCustom = new UIFCustom1(this);
+                }
+                return this.mUIFCustom;
+            }
+        }
+        
+        public HtmlEdit UIWDEdit
+        {
+            get
+            {
+                if ((this.mUIWDEdit == null))
+                {
+                    this.mUIWDEdit = new HtmlEdit(this);
+                    #region 搜索条件
+                    this.mUIWDEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "kw";
+                    this.mUIWDEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "wd";
+                    this.mUIWDEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
+                    this.mUIWDEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
+                    this.mUIWDEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUIWDEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = "s_ipt";
+                    this.mUIWDEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"wd\" class=\"s_ipt\" id=\"kw\" maxlengt";
+                    this.mUIWDEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "9";
+                    this.mUIWDEdit.WindowTitles.Add("TechnologyName valid technology name_百度搜索");
+                    #endregion
+                }
+                return this.mUIWDEdit;
+            }
+        }
+        
+        public HtmlInputButton UI百度一下Button
+        {
+            get
+            {
+                if ((this.mUI百度一下Button == null))
+                {
+                    this.mUI百度一下Button = new HtmlInputButton(this);
+                    #region 搜索条件
+                    this.mUI百度一下Button.SearchProperties[HtmlButton.PropertyNames.Id] = "su";
+                    this.mUI百度一下Button.SearchProperties[HtmlButton.PropertyNames.Name] = null;
+                    this.mUI百度一下Button.SearchProperties[HtmlButton.PropertyNames.DisplayText] = "百度一下";
+                    this.mUI百度一下Button.FilterProperties[HtmlButton.PropertyNames.Type] = "submit";
+                    this.mUI百度一下Button.FilterProperties[HtmlButton.PropertyNames.Title] = null;
+                    this.mUI百度一下Button.FilterProperties[HtmlButton.PropertyNames.Class] = "bg s_btn";
+                    this.mUI百度一下Button.FilterProperties[HtmlButton.PropertyNames.ControlDefinition] = "class=\"bg s_btn\" id=\"su\" type=\"submit\" v";
+                    this.mUI百度一下Button.FilterProperties[HtmlButton.PropertyNames.TagInstance] = "10";
+                    this.mUI百度一下Button.WindowTitles.Add("TechnologyName valid technology name_百度搜索");
+                    #endregion
+                }
+                return this.mUI百度一下Button;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIFCustom1 mUIFCustom;
+        
+        private HtmlEdit mUIWDEdit;
+        
+        private HtmlInputButton mUI百度一下Button;
+        #endregion
+    }
+    
+    [GeneratedCode("编码的 UI 测试生成器", "11.0.50727.1")]
+    public class UIFCustom1 : HtmlCustom
+    {
+        
+        public UIFCustom1(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region 搜索条件
+            this.SearchProperties["Id"] = "form";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = "f";
+            this.SearchProperties["TagName"] = "FORM";
+            this.FilterProperties["Class"] = "fm";
+            this.FilterProperties["ControlDefinition"] = "name=\"f\" class=\"fm\" id=\"form\" action=\"/s";
+            this.FilterProperties["TagInstance"] = "1";
+            this.WindowTitles.Add("TechnologyName valid technology name_百度搜索");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlSpan UIItemPane
+        {
+            get
+            {
+                if ((this.mUIItemPane == null))
+                {
+                    this.mUIItemPane = new HtmlSpan(this);
+                    #region 搜索条件
+                    this.mUIItemPane.SearchProperties[HtmlDiv.PropertyNames.Id] = null;
+                    this.mUIItemPane.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+                    this.mUIItemPane.FilterProperties[HtmlDiv.PropertyNames.InnerText] = null;
+                    this.mUIItemPane.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+                    this.mUIItemPane.FilterProperties[HtmlDiv.PropertyNames.Class] = "bg s_ipt_wr quickdelete-wrap";
+                    this.mUIItemPane.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "class=\"bg s_ipt_wr quickdelete-wrap\"";
+                    this.mUIItemPane.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "1";
+                    this.mUIItemPane.WindowTitles.Add("TechnologyName valid technology name_百度搜索");
+                    #endregion
+                }
+                return this.mUIItemPane;
+            }
+        }
+        
+        public HtmlSpan UIItemPane1
+        {
+            get
+            {
+                if ((this.mUIItemPane1 == null))
+                {
+                    this.mUIItemPane1 = new HtmlSpan(this);
+                    #region 搜索条件
+                    this.mUIItemPane1.SearchProperties[HtmlDiv.PropertyNames.Id] = null;
+                    this.mUIItemPane1.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+                    this.mUIItemPane1.FilterProperties[HtmlDiv.PropertyNames.InnerText] = null;
+                    this.mUIItemPane1.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+                    this.mUIItemPane1.FilterProperties[HtmlDiv.PropertyNames.Class] = "soutu-btn";
+                    this.mUIItemPane1.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "class=\"soutu-btn\"";
+                    this.mUIItemPane1.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "2";
+                    this.mUIItemPane1.WindowTitles.Add("TechnologyName valid technology name_百度搜索");
+                    #endregion
+                }
+                return this.mUIItemPane1;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlSpan mUIItemPane;
+        
+        private HtmlSpan mUIItemPane1;
         #endregion
     }
 }

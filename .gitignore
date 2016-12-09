@@ -60,3 +60,4 @@ MyTest/CodedUITestProject1/bin/*
 MyTest/CodedUITestProject1/obj/*
 MyTest/Demo/bin/*
 MyTest/Demo/obj/*
+*.dat
