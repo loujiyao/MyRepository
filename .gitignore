@@ -61,3 +61,4 @@ MyTest/CodedUITestProject1/obj/*
 MyTest/Demo/bin/*
 MyTest/Demo/obj/*
 *.dat
+MyTest/MyUITest/obj/Debug/TemporaryGeneratedFile_*
