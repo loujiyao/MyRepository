@@ -20,8 +20,10 @@ namespace MyUITest
         {
             Console.WriteLine("ExecuteTestCase()...");
 
+            // Get test case
             TestCase testCase = new TestCaseProvider().GetTestCase();
 
+            //
             UITestControl button = new UITestControl();
 
 

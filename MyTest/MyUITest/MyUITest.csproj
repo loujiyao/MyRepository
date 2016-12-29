@@ -46,7 +46,10 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="UIAutomationTypes" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
@@ -56,14 +59,15 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Action1.cs" />
-    <Compile Include="Core\ActionProvider.cs" />
-    <Compile Include="Core\ControlProvider.cs" />
+    <Compile Include="Core\Action\Action1.cs" />
+    <Compile Include="Core\Action\ActionProvider.cs" />
+    <Compile Include="Core\Common.cs" />
+    <Compile Include="Core\Control\ControlProvider.cs" />
     <Compile Include="Core\Engine.cs" />
     <Compile Include="Core\Extensions.cs" />
     <Compile Include="Core\Helper.cs" />
-    <Compile Include="Core\TestCase.cs" />
-    <Compile Include="Core\TestCaseProvider.cs" />
+    <Compile Include="Core\TestCase\TestCase.cs" />
+    <Compile Include="Core\TestCase\TestCaseProvider.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
