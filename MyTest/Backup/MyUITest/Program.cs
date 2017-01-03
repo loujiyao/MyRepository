@@ -27,8 +27,6 @@ namespace MyUITest
 
 
 
-
-
              Console.ReadKey();
          }
     }

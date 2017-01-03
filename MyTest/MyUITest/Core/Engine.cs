@@ -13,7 +13,43 @@ namespace MyUITest
         public void Execute()
         {
             Console.WriteLine("Execute()...");
-            ExecuteTestCase1();
+            //ExecuteTestCase1();
+
+            TestCase tc = new TestCase();
+            tc.Id = "TestCase1";
+            tc.Title = "MyFirstTestCase";
+            List<Action> actions = new List<Action>();
+            Action a1 = new Action();
+            a1.Name = "";
+            a1.ControlName = "";
+            
+            Param p1 = new Param();
+            p1.Name = "PrintString";
+            p1.Type = "String";
+            p1.Value = "HelloWorld!";
+            
+            Param p2 = new Param();
+            p2.Name = "PrintInt";
+            p2.Type = "Int";
+            p2.Value = "123";
+
+            Param p3 = new Param()
+            {
+                Name = "",
+                Type = "",
+                Value = ""
+            };
+
+            a1.param.Add(p1);
+            a1.param.Add(p2);
+            a1.param.Add(p3);
+            
+            tc.actions.Add(a1);
+
+            //TestCase.SerializeInstanceToXML(tc);
+            TestCase tc2 = TestCase.CreateInstanceFromXMLFile("");
+
+
         }
 
         public void ExecuteTestCase1()
@@ -27,9 +63,9 @@ namespace MyUITest
             UITestControl button = new UITestControl();
 
 
-            new ControlProvider().GetButton();
+            UITestControl control1 = new ControlProvider().GetButton();
 
-            UITestControl control1 = ControlProvider.GetControl();
+            //UITestControl control1 = ControlProvider.GetControl();
 
 
             object action = ActionProvider.GetAction();

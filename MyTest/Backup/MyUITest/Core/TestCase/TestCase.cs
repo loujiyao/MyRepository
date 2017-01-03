@@ -5,7 +5,6 @@ using System.Text;
 
 using System.IO;
 using System.Xml.Serialization;
-using System.Xml;
 //using Glider;
 //using Glider.Common;
 //using Glider.DataPool.Data;
@@ -243,14 +242,14 @@ namespace MyUITest
 
         public TestCase()
         {
-            this.actionsField = new List<Action>();
+            this.actionsField = new List<Actions>();
         }
 
-        private List<Action> actionsField;
+        private List<Actions> actionsField;
 
         private string idField;
 
-        private string titleField;
+        private string titleField;        
 
         private string testCasePath;
 
@@ -258,7 +257,7 @@ namespace MyUITest
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("actions", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public List<Action> actions
+        public List<Actions> actions
         {
             get
             {
@@ -335,87 +334,62 @@ namespace MyUITest
         /// <remarks>Added By: A M Belton on 4th Sept 2012</remarks>
         public static TestCase CreateInstanceFromXML(string testXml)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(TestCase));
-
+            XmlSerializer serializer = new XmlSerializer(typeof(TestCase));                                          
+                 
             //testXml = DataPoolStore.DefaultStore.MergeTestData(testXml);
             using (var sr = new StringReader(testXml))
             {
                 return (TestCase)serializer.Deserialize(sr);
             }
         }
-
-        public static void SerializeInstanceToXML(TestCase testCase)
-        {
-            XmlSerializer serializer = new XmlSerializer(typeof(TestCase));
-
-            using (var fs = new FileStream("..\\..\\Test\\testcase1.xml", FileMode.Create))
-            {
-                serializer.Serialize(fs, testCase);
-                fs.Close();
-            }
-        }
-
-        public static TestCase CreateInstanceFromXMLFile(string fileName)
-        {
-            XmlSerializer serializer = new XmlSerializer(typeof(TestCase));
-
-            using (StreamReader sr = new StreamReader("..\\..\\Test\\testcase1.xml"))
-            {
-                using (var r = new StringReader(sr.ReadToEnd()))
-                {
-                    return (TestCase)serializer.Deserialize(r);
-                }
-            }
-        }
-
     }
 
-    ///// <remarks/>
-    //[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    //[System.SerializableAttribute()]
-    //[System.Diagnostics.DebuggerStepThroughAttribute()]
-    //[System.ComponentModel.DesignerCategoryAttribute("code")]
-    //[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    //public partial class Actions
-    //{
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class Actions
+    {
 
-    //    public Actions()
-    //    {
-    //        this.actionField = new List<Action>();
-    //    }
+        public Actions()
+        {
+            this.actionField = new List<Action>();
+        }
 
-    //    private List<Action> actionField;
+        private List<Action> actionField;
 
-    //    private string descriptionField;
+        private string descriptionField;
 
-    //    /// <remarks/>
-    //    [System.Xml.Serialization.XmlElementAttribute("actions")]
-    //    public List<Action> actions
-    //    {
-    //        get
-    //        {
-    //            return this.actionField;
-    //        }
-    //        set
-    //        {
-    //            this.actionField = value;
-    //        }
-    //    }
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("action")]
+        public List<Action> action
+        {
+            get
+            {
+                return this.actionField;
+            }
+            set
+            {
+                this.actionField = value;
+            }
+        }
 
-    //    /// <remarks/>
-    //    [System.Xml.Serialization.XmlAttributeAttribute()]
-    //    public string Description
-    //    {
-    //        get
-    //        {
-    //            return this.descriptionField;
-    //        }
-    //        set
-    //        {
-    //            this.descriptionField = value;
-    //        }
-    //    }
-    //}
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string Description
+        {
+            get
+            {
+                return this.descriptionField;
+            }
+            set
+            {
+                this.descriptionField = value;
+            }
+        }
+    }
 
 }
 
