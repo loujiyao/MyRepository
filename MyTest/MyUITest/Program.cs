@@ -21,14 +21,14 @@ namespace MyUITest
     {
          static void Main(string[] args)
          {
-             Console.WriteLine("HelloWorld!");
+             Console.WriteLine("Start!");
              Engine e = new Engine();
              e.Execute();
 
 
 
 
-
+             Console.WriteLine("Finished!");
              Console.ReadKey();
          }
     }
