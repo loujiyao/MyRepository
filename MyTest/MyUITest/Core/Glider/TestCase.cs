@@ -263,7 +263,7 @@ namespace Glider
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("actions", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public List<Actions> actions
+        public List<Actions> actionsList
         {
             get
             {

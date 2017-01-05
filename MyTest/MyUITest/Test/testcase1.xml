@@ -1,9 +1,43 @@
 <?xml version="1.0"?>
-<testCase Id="TestCase1" Title="MyFirstTestCase">
-  <actions Name="" ControlName="">
-    <param Type="String" Name="PrintString" Value="HelloWorld!" />
-    <param Type="Int" Name="PrintInt" Value="123" />
-    <param Type="" Name="" Value="" />
-    <ExtendedProperties />
+<testCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Id="TestCase1" Title="MyFirstTestCase">
+  <actions Description="My test actions1">
+    <action Name="" ControlName="">
+      <param Type="String" Name="PrintString" Value="HelloWorld!" />
+      <param Type="Int" Name="PrintInt" Value="123" />
+      <param Type="" Name="" Value="" />
+      <ExtendedProperties>
+        <ExtendedProperty Name="ep1" Value="v1" />
+        <ExtendedProperty Name="ep2" Value="v2" />
+      </ExtendedProperties>
+    </action>
+    <action Name="" ControlName="">
+      <param Type="String" Name="PrintString" Value="HelloWorld!" />
+      <param Type="Int" Name="PrintInt" Value="123" />
+      <param Type="" Name="" Value="" />
+      <ExtendedProperties>
+        <ExtendedProperty Name="ep1" Value="v1" />
+        <ExtendedProperty Name="ep2" Value="v2" />
+      </ExtendedProperties>
+    </action>
+  </actions>
+  <actions Description="My test actions1">
+    <action Name="" ControlName="">
+      <param Type="String" Name="PrintString" Value="HelloWorld!" />
+      <param Type="Int" Name="PrintInt" Value="123" />
+      <param Type="" Name="" Value="" />
+      <ExtendedProperties>
+        <ExtendedProperty Name="ep1" Value="v1" />
+        <ExtendedProperty Name="ep2" Value="v2" />
+      </ExtendedProperties>
+    </action>
+    <action Name="" ControlName="">
+      <param Type="String" Name="PrintString" Value="HelloWorld!" />
+      <param Type="Int" Name="PrintInt" Value="123" />
+      <param Type="" Name="" Value="" />
+      <ExtendedProperties>
+        <ExtendedProperty Name="ep1" Value="v1" />
+        <ExtendedProperty Name="ep2" Value="v2" />
+      </ExtendedProperties>
+    </action>
   </actions>
 </testCase>
