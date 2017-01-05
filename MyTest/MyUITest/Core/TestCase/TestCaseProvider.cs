@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyTest
+namespace MyUITest
 {
-    class Program
+    public class TestCaseProvider
     {
-        static void Main(string[] args)
+        public TestCase GetTestCase()
         {
+            return new TestCase();
         }
     }
 }
